@@ -20,9 +20,9 @@ module "autoscaling" {
     test = "test"
   }
   )
-  min_size = 1
+  min_size = 2
   max_size = 4
-  target_group_arns = [module.network_load.target_group]
+  target_group_arns = [module.network_load.target_group, module.network_load.web_target_group]
 }
 
 

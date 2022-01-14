@@ -13,7 +13,7 @@ resource "aws_lb_target_group" "nlb_targets" {
 }
 
 resource "aws_lb_target_group" "web_traffic" {
-  name     = "tf-example-lb-tg"
+  name     = "tf-example-lb-tg-web"
   port     = 80
   protocol = "TCP"
   vpc_id   = var.vpc_id
@@ -32,3 +32,14 @@ resource "aws_lb_listener" "network" {
   }
 }
 
+resource "aws_lb_listener" "web" {
+  load_balancer_arn = aws_lb.network_load.arn
+  port              = 80
+  protocol          = "TCP"
+ 
+
+  default_action {
+    type             = "forward"
+    target_group_arn = aws_lb_target_group.web_traffic.arn
+  }
+}
