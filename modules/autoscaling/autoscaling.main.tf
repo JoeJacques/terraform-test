@@ -26,10 +26,11 @@ resource "aws_autoscaling_group" "autoscaling_group" {
   }
 }
 
+
 resource "aws_autoscaling_schedule" "scaledown" {
   scheduled_action_name  = "scale_down"
   min_size               = var.min_size 
-  max_size               = var.max_size -1
+  max_size               = var.max_size 
   desired_capacity       = 1
   recurrence = var.scale_down_cron
   time_zone = var.timezone

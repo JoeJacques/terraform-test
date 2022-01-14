@@ -130,19 +130,24 @@ Once you hit enter these credentials will be saved within your `.aws` folder, wi
 
 ## Install Terraform
 
-Before we deploy our playground infrastructure you will need to install Terraform on your local machine. Please [visit the Hashicorp website](https://learn.hashicorp.com/tutorials/terraform/install-cli) for how to do this.
+Before we deploy the infrastructure you will need to install Terraform on your local machine. Please [visit the Hashicorp website](https://learn.hashicorp.com/tutorials/terraform/install-cli) for how to do this.
 
 
 ## Build Enviroment
 
+
+```
 $ terraform init
-```  
+```
+
 This will initialise a working directory containing our Terraform configuration files. This command is always safe to run multiple times, to bring the working directory up to date with changes in the configuration. You should see the following
 <p align="center">
 <img src=/images/init.png width="600">
 </p>
 
-
+```
+$ terraform plan
+```
 
 This command is used to create an execution plan. Terraform performs a refresh, unless explicitly disabled, and then determines what actions are necessary to achieve the desired state specified in the configuration files.
 
@@ -152,7 +157,7 @@ This command is a convenient way to check whether the execution plan for a set o
 <img src=images/images/plan.png width="600">
 </p>
 
-Finally you need to run:
+
 ```
 $ terraform apply
 ```
