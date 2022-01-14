@@ -6,7 +6,7 @@
 First off please clone this repo to your local machine:
 
 ```
-$ git clone git@github.com:/DIY.git
+$ git clone https://github.com/JoeJacques/terraform-test.git
 ```
 
 From there you can open using your text editor of choice but before moving on there area few things to get through first.
@@ -142,7 +142,7 @@ $ terraform init
 
 This will initialise a working directory containing our Terraform configuration files. This command is always safe to run multiple times, to bring the working directory up to date with changes in the configuration. You should see the following
 <p align="center">
-<img src=/images/init.png width="600">
+<img src=/images/init.PNG width="600">
 </p>
 
 ```
@@ -154,7 +154,7 @@ This command is used to create an execution plan. Terraform performs a refresh, 
 This command is a convenient way to check whether the execution plan for a set of changes matches your expectations without making any changes to real resources or to the state. For example, terraform plan might be run before committing a change to version control, to create confidence that it will behave as expected. The plan will be fairly long but if all went well you should see the following in your terminal:
 
 <p align="center">
-<img src=images/images/plan.png width="600">
+<img src=images/images/plan.PNG width="600">
 </p>
 
 
