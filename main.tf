@@ -7,7 +7,6 @@ module "network_load" {
    source       ="./modules/NLB"
    vpc_id = module.network.vpc_id
    subnet_id = [module.network.public_subnets.0]
-   security_group_ids = [module.network.allow_all_security_group_id]
 }
 
 module "autoscaling" {

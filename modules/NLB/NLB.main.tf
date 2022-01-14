@@ -3,8 +3,6 @@ resource "aws_lb" "network_load" {
   internal           = false
   load_balancer_type = var.type
   subnets            = var.subnet_id
-  security_groups = var.security_group_ids
-
 }
 
 resource "aws_lb_target_group" "nlb_targets" {

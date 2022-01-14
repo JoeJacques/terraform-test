@@ -1,7 +1,5 @@
 provider "aws" {
   region = var.region
-  access_key = ""
-  secret_key = ""
 }
 
 # NOT CCOMMITING KEYS PLEASE USE LOCAL SECRET KEYS FROM YOUR ENV
