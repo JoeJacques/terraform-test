@@ -154,7 +154,7 @@ This command is used to create an execution plan. Terraform performs a refresh, 
 This command is a convenient way to check whether the execution plan for a set of changes matches your expectations without making any changes to real resources or to the state. For example, terraform plan might be run before committing a change to version control, to create confidence that it will behave as expected. The plan will be fairly long but if all went well you should see the following in your terminal:
 
 <p align="center">
-<img src=images/images/plan.PNG width="600">
+<img src=./images/plan.PNG width="600">
 </p>
 
 
