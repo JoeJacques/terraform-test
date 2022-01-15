@@ -97,15 +97,15 @@ First of all, it is not best practice to use your AWS root user access key as th
 
 To do this navigate to the `services` menu at the top left of your console. in the search bar type in `IAM` to bring up the `Identity and Access Management` dashboard. Down the lefthand side click on `Users` and then `Add user`:
 
-![IAM](README_images/IAM.png)
+![IAM](images/IAM.png)
 
 Add in your user's name and select `programmatic access`, which will give your user access to create the required resources but not access your management console:
 
-![add_user](README_images/add_user.png)
+![add_user](images/add_user.png)
 
 Click `Next: Permissions` and then we want to `Attach existing policies directly`. At the top of that list tick the box for `AdministratorAccess` providing your user with full access to AWS services and resources.
 
-![user_permissions](README_images/user_permissions.png)
+![user_permissions](images/user_permissions.png)
 
 Click `Next: Tags` and add any tags you wish to give your user and click `Next: Review`. You should see all details here and if you see the correct name and access type as programmatic access, you are good to go; hit `Create user`.
 
@@ -123,7 +123,7 @@ This will then prompt you to input the following:
 * `Default output format` - specifies how the results are formatted. However, you can leave this blank as well but for reference you could use json, yaml, yaml-stream, text or table. Default is json.
 
 Example:
-![aws_config](README_images/aws_config.png)
+![aws_config](images/aws_config.png)
 
 Once you hit enter these credentials will be saved within your `.aws` folder, within your root directory, as your default profile. Terraform will look in here and use these credentials to access your account and build what it needs.
 
